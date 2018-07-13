@@ -1,0 +1,19 @@
+load C:\xf\aerofoil.dat
+MyAerofoil
+panel
+oper
+visc
+1397535
+M
+0.1
+type
+1
+pacc
+C:\xf\polar.dat
+
+iter
+5000
+cl 1.2
+
+
+quit

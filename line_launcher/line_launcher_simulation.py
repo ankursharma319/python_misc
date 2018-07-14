@@ -1,5 +1,4 @@
 import numpy as np
-import pylab as pl
 import matplotlib.pyplot as plt
 
 def zeros(length):
@@ -17,14 +16,6 @@ def sphereCd(Re):
     + (0.411*(Re/263000)**-7.94)/(1+(Re/263000)**-8)
     + (Re**0.8)/461000
     return cd
-
-def plot(Xs, Ys):
-    """
-    """
-    pl.plot(Xs, Ys, label="data")
-    pl.xlabel("")
-    pl.legend()
-    pl.show()
 
 # ------------------------------------CASE #1------------------------------
 # ------------------------------------CASE #1------------------------------
@@ -171,15 +162,6 @@ while (x[i] > 0):
     Re[i] = v[i+1] * S / nu
     cd[i+1] = sphereCd(Re[i])
     i = i + 1
-    # print(v[i])
-
-#pl.plot(x[0:i], v[0:i], label="Case 2")
-#
-#pl.xlabel("")
-#pl.legend()
-#pl.show()
-
-# plot(x[0:i], v[0:i])
 
 # -------------------------------Trajectory code----------------------------
 # -------------------------------Trajectory code----------------------------
@@ -219,7 +201,9 @@ while h[j] > 0:
     j = j + 1
 
 plt.plot(x[0:j], h[0:j], 'r-', label="Case #2: {} deg".format(alpha*180/np.pi))
-
+plt.xlabel('X position (m)')
+plt.ylabel('Height (m)')
+plt.title('Flight trajectory with different initial angle of launch')
 plt.legend()
 plt.show()
 

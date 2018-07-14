@@ -101,11 +101,12 @@ def parameter_sweep(w_array, cl, file_path, xfoil_path):
         cd_array[i] = run_xfoil_wcl(w_array[i], cl, file_path, xfoil_path)
     return cd_array
 
-file_path = "C:\\xf\\2\\"
-xfoil_path = "C:\\xf\\"
-#parametric_aerofoil(1, file_path)
-#print run_xfoil_wcl(1.1, 0.8433, file_path, xfoil_path)
-#w_array = np.linspace (0.6 , 1.2 , 11)
-#cd = parameter_sweep(w_array, 0.843, file_path , xfoil_path)
+currentDir = os.path.dirname(os.path.abspath(__file__))
+file_path = currentDir + "\\xf\\1\\"
+xfoil_path = currentDir + "\\xf\\"
+parametric_aerofoil(1, file_path)
+print(run_xfoil_wcl(1.1, 0.8433, file_path, xfoil_path))
+w_array = np.linspace (0.6 , 1.2 , 11)
+d = parameter_sweep(w_array, 0.843, file_path , xfoil_path)
 ###
-#print mls_curve_fit(w_array, cd, 1)
+print(mls_curve_fit(w_array, cd, 1))

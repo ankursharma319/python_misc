@@ -68,4 +68,4 @@ def rational_bezier(points, weights):
 pts = np.array([[0, 0], [1, 0.5], [0.5, 1], [0.5, 2], [0, 1.5]])
 wts = np.array([1,10,5,15,1])
 #bezier(pts)
-#rational_bezier(pts, wts)
+rational_bezier(pts, wts)

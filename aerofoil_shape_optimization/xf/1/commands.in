@@ -1,4 +1,4 @@
-load C:\xf\1\aerofoil.dat
+load D:\Downloads\Keep\git_projects\python_misc\aerofoil_shape_optimization\xf\1\aerofoil.dat
 MyAerofoil
 panel
 oper
@@ -9,7 +9,7 @@ M
 type
 1
 pacc
-C:\xf\1\polar.dat
+D:\Downloads\Keep\git_projects\python_misc\aerofoil_shape_optimization\xf\1\polar.dat
 
 iter
 5000

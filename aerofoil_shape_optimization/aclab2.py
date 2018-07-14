@@ -74,7 +74,7 @@ quit""")
     aero_data_file = open(file_path + "polar.dat")
     
     lines = aero_data_file.readlines()
-    
+    print(lines)
     # close file
     aero_data_file.close()
     
@@ -86,7 +86,8 @@ quit""")
     cd = np.float(lines[-1][20: 27])
     return (cd, cl)
 
-file_path = "C:\\xf\\1\\"
-xfoil_path = "C:\\xf\\"
+currentDir = os.path.dirname(os.path.abspath(__file__))
+file_path = currentDir + "\\xf\\1\\"
+xfoil_path = currentDir + "\\xf\\"
 #bezier_spline_aerofoil(file_path)
-print run_xfoil(file_path, xfoil_path)
+print(run_xfoil(file_path, xfoil_path))

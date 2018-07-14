@@ -115,4 +115,4 @@ xfoil_path = "C:\\xf\\"
 #print one_dim_opt(1.0, 0.843, file_path, xfoil_path)
 x0 = [1, 1, 1, 1]
 weight_limits = ((0.5, 1.3),(0.5, 1.3),(0.5, 1.3),(0.5, 1.3))
-print four_dim_opt(x0, weight_limits, 0.843, file_path, xfoil_path)
+print(four_dim_opt(x0, weight_limits, 0.843, file_path, xfoil_path))
